@@ -1,0 +1,4 @@
+- Ch?y chuong trình b?ng server local
+- S? d?ng: https://app.contentful.com/ d? dang bài vi?t
+- Vi?t b?ng javascrip 
+- S? d?ng phuong th?c API d? c?p nh?t các s?n ph?m
