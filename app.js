@@ -15,7 +15,7 @@ const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total"); 
 const cartContent = document.querySelector(".cart-content");
-const productsDOM = document.querySelector(".products-center");
+const productsDOM = document.querySelector(".products-center"); 
 
 //cart
 let cart = [];
@@ -23,50 +23,16 @@ let cart = [];
 let buttonsDOM = [];
 // getting the products
 
-
-//class Products {
-//  async getProducts() {
-//    try {
-//      let result = await fetch("products.json");
-//      let data = await result.json();
-//       let contentful = await client.getEntries({
-//         content_type: "loilvProjectOne"
-//       });
-//       console.log(contentful.items);
-//       console.log(data);
-//
-////      let products = data.items;
-//      let products = contentful.items;
-//      products = products.map(item => {
-//        const { title, price } = item.fields;
-//        const { id } = item.sys;
-//        const image = item.fields.image.fields.file.url;
-//        return { title, price, id, image };
-//      });
-//      console.log(products);
-//
-//      return products;
-//    } catch (error) {
-//      console.log(error);
-//    }
-//  }
-//}
-
-
-
 class Products{
     async getProducts(){
         try{
-//            let contentful = await client.getEntries();
-//            let contentful = await client.getEntry();
-            
-            let result = await fetch("products.json");
-            let data = await result.json();
+//            let result = await fetch("products.json");
+//            let data = await result.json();
             let contentful = await client.getEntries({
                 content_type: "loilvProjectOne"
             });
-            console.log(contentful.items);
-            console.log(data);
+//            console.log(contentful.items);
+//            console.log(data);
 //            let products = data.items;
             let products = contentful.items;
         
@@ -77,7 +43,7 @@ class Products{
                 return {title, price, id, image}
             });
             return products;
-            console.log(products);
+//            console.log(products);
         } catch(error){
             console.log(error);
         }
