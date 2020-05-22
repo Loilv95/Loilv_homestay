@@ -70,7 +70,7 @@ class UI{
                 </button>
               </div>
               <h3>${product.title}</h3>
-              <h4>${product.price}</h4>
+              <h4>$${product.price}</h4>
             </article>
             <!-- end of single product -->
             `;
@@ -122,7 +122,7 @@ class UI{
             `<img src=${item.image} alt="product" />
             <div>
               <h4>${item.title}</h4>
-              <h5>${item.price}</h5>
+              <h5>$${item.price}</h5>
               <span class="remove-item" data-id=${item.id}>remove</span>
             </div>
             <div>
@@ -134,7 +134,8 @@ class UI{
     }
     showCart(){
         cartOverlay.classList.add('transparentBcg');  
-        cartDOM.classList.add('showCart');  
+        cartOverlay.classList.add('transparentBcg');
+        cartDOM.classList.add('showCart');
     }
     setupAPP(){
         cart =  Storage.getCart(); 
@@ -216,10 +217,9 @@ class UI{
 class Storage{
     static saveProducts(products){
         localStorage.setItem("products", JSON.stringify(products));
-        
     }
     static getProduct(id) {
-        let products = JSON.parse(localStorage.getItem('products')); 
+        let products = JSON.parse(localStorage.getItem('products'));
         return products.find(product => product.id === id);
     }
     static saveCart(cart){
